@@ -186,13 +186,13 @@ const FeaturesSplit = ({
                                 className="split-item-content center-content-mobile reveal-from-right"
                                 data-reveal-container=".split-item"
                             >
-                                <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
+                                <div className="text-xxs text-color-primary fw-600 tt-u mb-8 alignRight">
                                     Lightning fast workflow
                                 </div>
-                                <h3 className="mt-0 mb-12">
+                                <h3 className="mt-0 mb-12 alignRight">
                                     Daily Total Purchases
                                 </h3>
-                                <p className="m-0">
+                                <p className="m-0 alignRight">
                                     Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua
