@@ -6,12 +6,9 @@ export const getAreaChartData = async () => {
             return response.json();
         })
         .then(function (data) {
-            data.map(data => {
-                return {
-                    ...data,
-                    date: data.date.substring(5)
-                }
-            });
-            return data;
+            for (let i = 0; i < data.length; i++) {
+                data[i].date = data[i].date.substring(5);
+            }
+            return data.reverse();
         });
 };

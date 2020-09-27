@@ -1,5 +1,6 @@
 {
-  "name": "open-react-template",
+  "homepage": "http://daniel0226.github.io/CapitalOneHackathonFrontEnd/capital-one-hackathon-front-end",
+  "name": "capital-one-hackathon-front-end",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,6 +21,8 @@
     "url": "https://github.com/cruip/open-react-template.git"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
