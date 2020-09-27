@@ -5,6 +5,7 @@ import FeaturesTiles from '../components/sections/FeaturesTiles';
 import FeaturesSplit from '../components/sections/FeaturesSplit';
 import Testimonial from '../components/sections/Testimonial';
 import Cta from '../components/sections/Cta';
+import Architecture from "../components/sections/Architecture";
 
 const Home = () => {
     return (
@@ -18,7 +19,7 @@ const Home = () => {
                 className="illustration-section-02"
             />
             <Testimonial topDivider />
-            <Cta split />
+            <Architecture topDivider/>
         </>
     );
 };
