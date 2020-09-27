@@ -17,7 +17,7 @@ async function getPercentages(Categories, sum) {
             value: (parseFloat(Categories.get(keys[j])) / sum) * 100,
         });
     }
-    
+
     return PricePercentages;
 }
 
@@ -58,7 +58,7 @@ async function getSumCategories(Merchants, Purchases) {
 async function getPurchasesByID() {
     let Purchases = [];
     await fetch(
-        'http://api.reimaginebanking.com/accounts/5f6ea470f1bac107157e1199/purchases?key=9c1ac5d3dab026944436f0acda93c966'
+        'https://bg19k9870g.execute-api.us-east-1.amazonaws.com/dev/purchases/5f6ea470f1bac107157e1199'
     )
         .then(function (response) {
             return response.json();
@@ -75,7 +75,7 @@ async function getMerchantCategory() {
     let MerchantCategory = new Map();
 
     await fetch(
-        'http://api.reimaginebanking.com/merchants?key=9c1ac5d3dab026944436f0acda93c966'
+        'https://bg19k9870g.execute-api.us-east-1.amazonaws.com/dev/merchants'
     )
         .then(function (response) {
             return response.json();

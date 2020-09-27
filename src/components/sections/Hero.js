@@ -68,7 +68,7 @@ const Hero = ({
                                 className="m-0 mb-32 reveal-from-bottom"
                                 data-reveal-delay="400"
                             >
-                                Take control of your personal fiances, keep track of your purchases and expensese.
+                                Take control of your personal finances, keep track of your purchases and expenses.
                                 Get to know your payment patterns and prevent money leaks.
                             </p>
                             <div
