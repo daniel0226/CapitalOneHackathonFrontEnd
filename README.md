@@ -1,16 +1,14 @@
 # Capital One Hackathon
 
-![Open React template preview](https://user-images.githubusercontent.com/2683512/78789364-545e7100-79ad-11ea-9e3c-9528c99cda8e.png)
+![Open React template preview](src/assets/images/CapitalOneCollage.jpg)
 
-**Open** is a **free React landing page template designed** for developers/makers who want to create a quick and professional landing page for their open source projects, SaaS products, online services, and more.
+Capital One Finance Hacks is a powerful and insightful tool in a Capital One Customer's finances. Complete with Data Driven components and a easily accessible Chatbot.
 
-Use it for whatever you want, and be sure to reach us out on [Twitter](https://twitter.com/Cruip_com) if you build anything cool/useful with it.
-
-Created and maintained with ❤️ by [Cruip.com](https://cruip.com).
+Created and maintained with ❤️ by [Panda, Daniel, and Jackie]
 
 ## Live demo
 
-Check the live demo here 👉️ [https://open.cruip.com/](https://open.cruip.com/)
+Check the live demo here 👉️ [https://master.d3j0s1d49e8f2r.amplifyapp.com/](https://master.d3j0s1d49e8f2r.amplifyapp.com/)
 
 ## Table of contents
 
