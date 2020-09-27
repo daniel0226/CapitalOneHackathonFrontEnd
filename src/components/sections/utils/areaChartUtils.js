@@ -6,7 +6,6 @@ export const getAreaChartData = async () => {
             return response.json();
         })
         .then(function (data) {
-            console.log(JSON.stringify(data));
             data.map(data => {
                 return {
                     ...data,
