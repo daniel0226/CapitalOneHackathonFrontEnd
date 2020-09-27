@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
-import Button from '../elements/Button';
 
 const propTypes = {
     ...SectionTilesProps.types,
@@ -204,7 +203,7 @@ const FeaturesTiles = ({
                                         1:1 advice from your own expert
                                     </h4>
                                     <p className="m-0 text-sm">
-                                        Work with dedicated experts who listens, guides, and grows with you. 
+                                        Work with dedicated experts who listens, guides, and grows with you.
                                     </p>
                                 </div>
                             </div>

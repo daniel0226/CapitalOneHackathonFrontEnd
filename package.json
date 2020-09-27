@@ -1,9 +1,10 @@
 {
-  "homepage": "http://daniel0226.github.io/CapitalOneHackathonFrontEnd/capital-one-hackathon-front-end",
   "name": "capital-one-hackathon-front-end",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@aws-amplify/ui-react": "^0.2.22",
+    "aws-amplify": "^3.3.2",
     "classnames": "^2.2.6",
     "deep-equal": "^2.0.3",
     "lodash": "^4.17.15",
