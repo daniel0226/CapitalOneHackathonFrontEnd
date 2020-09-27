@@ -252,7 +252,7 @@ const FeaturesSplit = ({
                                 )}
                                 data-reveal-container=".split-item"
                             >
-                                <RadialBarChart width={500} height={300} cx={150} cy={150} innerRadius={20} outerRadius={140} barSize={10} data={radialData}>
+                                <RadialBarChart width={500} height={300} cx={150} cy={150} innerRadius={20} outerRadius={170} barSize={35} data={radialData}>
                                     <RadialBar minAngle={15} label={{ position: 'insideStart', fill: '#fff' }} background clockWise dataKey="uv" />
                                 </RadialBarChart>
                             </div>
