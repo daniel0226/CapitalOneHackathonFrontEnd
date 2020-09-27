@@ -10,6 +10,7 @@ const Home = () => {
     return (
         <>
             <Hero className="illustration-section-01" />
+            <FeaturesTiles></FeaturesTiles>
             <FeaturesSplit
                 invertMobile
                 topDivider
