@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/CapitalOneHackathonFrontEnd/static/css/main.b4cebdb4.chunk.css",
+    "main.js": "/CapitalOneHackathonFrontEnd/static/js/main.b475e978.chunk.js",
+    "main.js.map": "/CapitalOneHackathonFrontEnd/static/js/main.b475e978.chunk.js.map",
+    "runtime-main.js": "/CapitalOneHackathonFrontEnd/static/js/runtime-main.9a2de0e1.js",
+    "runtime-main.js.map": "/CapitalOneHackathonFrontEnd/static/js/runtime-main.9a2de0e1.js.map",
+    "static/js/2.d0a76eb4.chunk.js": "/CapitalOneHackathonFrontEnd/static/js/2.d0a76eb4.chunk.js",
+    "static/js/2.d0a76eb4.chunk.js.map": "/CapitalOneHackathonFrontEnd/static/js/2.d0a76eb4.chunk.js.map",
+    "index.html": "/CapitalOneHackathonFrontEnd/index.html",
+    "precache-manifest.816a9130ef76c58e0468e2c9a36d4862.js": "/CapitalOneHackathonFrontEnd/precache-manifest.816a9130ef76c58e0468e2c9a36d4862.js",
+    "service-worker.js": "/CapitalOneHackathonFrontEnd/service-worker.js",
+    "static/css/main.b4cebdb4.chunk.css.map": "/CapitalOneHackathonFrontEnd/static/css/main.b4cebdb4.chunk.css.map",
+    "static/js/2.d0a76eb4.chunk.js.LICENSE.txt": "/CapitalOneHackathonFrontEnd/static/js/2.d0a76eb4.chunk.js.LICENSE.txt",
+    "static/media/style.scss": "/CapitalOneHackathonFrontEnd/static/media/illustration-section-01.ea694903.svg",
+    "static/media/feature-tile-icon-01.svg": "/CapitalOneHackathonFrontEnd/static/media/feature-tile-icon-01.0f9928d7.svg",
+    "static/media/feature-tile-icon-02.svg": "/CapitalOneHackathonFrontEnd/static/media/feature-tile-icon-02.bd39f304.svg",
+    "static/media/feature-tile-icon-03.svg": "/CapitalOneHackathonFrontEnd/static/media/feature-tile-icon-03.66f37ba5.svg",
+    "static/media/feature-tile-icon-04.svg": "/CapitalOneHackathonFrontEnd/static/media/feature-tile-icon-04.836acd10.svg",
+    "static/media/feature-tile-icon-05.svg": "/CapitalOneHackathonFrontEnd/static/media/feature-tile-icon-05.fa9ba00b.svg",
+    "static/media/feature-tile-icon-06.svg": "/CapitalOneHackathonFrontEnd/static/media/feature-tile-icon-06.6a177696.svg",
+    "static/media/logo.svg": "/CapitalOneHackathonFrontEnd/static/media/logo.2810a88b.svg",
+    "static/media/video-placeholder.jpg": "/CapitalOneHackathonFrontEnd/static/media/video-placeholder.a622fc5d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9a2de0e1.js",
+    "static/js/2.d0a76eb4.chunk.js",
+    "static/css/main.b4cebdb4.chunk.css",
+    "static/js/main.b475e978.chunk.js"
+  ]
+}
