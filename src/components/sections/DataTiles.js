@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
@@ -20,16 +20,6 @@ async function getData() {
     console.log(Percentages);
     return Percentages;
 }
-
-const data2 = [
-    { name: 'Group A', value: 400 },
-    { name: 'Group B', value: 300 },
-    { name: 'Group C', value: 300 },
-    { name: 'Group D', value: 200 },
-];
-console.log(data2);
-
-var data = Object.values(getData());
 
 async function getPercentages(Categories) {
     let PricePercentages = [];
@@ -162,6 +152,14 @@ const DataTiles = ({
     pushLeft,
     ...props
 }) => {
+    const [data, setData] = useState([]);
+
+    getData().then(result => {
+        setData(result);
+    }).catch(error => {
+        console.error(`There was an error with the getData method`, error);
+    });
+
     const outerClasses = classNames(
         'features-tiles section',
         topOuterDivider && 'has-top-divider',
