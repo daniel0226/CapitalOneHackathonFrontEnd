@@ -60,17 +60,16 @@ const Hero = ({
                             className="mt-0 mb-16 reveal-from-bottom"
                             data-reveal-delay="200"
                         >
-                            Landing template for{' '}
-                            <span className="text-color-primary">startups</span>
+                            Capital One Financial{' '}
+                            <span className="text-color-primary">Hack</span>
                         </h1>
                         <div className="container-xs">
                             <p
                                 className="m-0 mb-32 reveal-from-bottom"
                                 data-reveal-delay="400"
                             >
-                                Our landing page template works on all devices,
-                                so you only have to set it up once, and get
-                                beautiful results forever.
+                                Take control of your personal fiances, keep track of your purchases and expensese.
+                                Get to know your payment patterns and prevent money leaks.
                             </p>
                             <div
                                 className="reveal-from-bottom"
@@ -81,7 +80,7 @@ const Hero = ({
                                         tag="a"
                                         color="primary"
                                         wideMobile
-                                        href="https://cruip.com/"
+                                        href="#"
                                     >
                                         Get started
                                     </Button>
@@ -89,7 +88,7 @@ const Hero = ({
                                         tag="a"
                                         color="dark"
                                         wideMobile
-                                        href="https://github.com/cruip/open-react-template/"
+                                        href="https://github.com/daniel0226/CapitalOneHackathonFrontEnd"
                                     >
                                         View on Github
                                     </Button>
