@@ -6,7 +6,6 @@ export const getAreaChartData = async () => {
             return response.json();
         })
         .then(function (data) {
-            console.log(JSON.stringify(data));
             for (let i = 0; i < data.length; i++) {
                 data[i].date = data[i].date.substring(5);
             }
