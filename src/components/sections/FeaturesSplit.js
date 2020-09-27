@@ -2,8 +2,7 @@ import React, {useState} from 'react';
 import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
-import Image from '../elements/Image';
-import {Area, AreaChart, CartesianGrid, Cell, Pie, PieChart, Tooltip, XAxis, YAxis} from "recharts";
+import {Area, AreaChart, CartesianGrid, Cell, Pie, PieChart, Tooltip, XAxis, YAxis, RadialBarChart, RadialBar, Legend} from "recharts";
 import {getPieChartData} from "./utils/pieChartUtils";
 import {getAreaChartData} from "./utils/areaChartUtils";
 const deepEqual = require('deep-equal');
@@ -16,6 +15,36 @@ const defaultProps = {
     ...SectionSplitProps.defaults,
 };
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+
+const radialData = [
+    {
+      name: '18-24', uv: 31.47, pv: 2400, fill: '#8884d8',
+    },
+    {
+      name: '25-29', uv: 26.69, pv: 4567, fill: '#83a6ed',
+    },
+    {
+      name: '30-34', uv: 15.69, pv: 1398, fill: '#8dd1e1',
+    },
+    {
+      name: '35-39', uv: 8.22, pv: 9800, fill: '#82ca9d',
+    },
+    {
+      name: '40-49', uv: 8.63, pv: 3908, fill: '#a4de6c',
+    },
+    {
+      name: '50+', uv: 2.63, pv: 4800, fill: '#d0ed57',
+    },
+    {
+      name: 'unknow', uv: 6.67, pv: 4800, fill: '#ffc658',
+    },
+  ];
+
+const radialStyle = {
+    top: 0,
+    left: 350,
+    lineHeight: '24px',
+  };
 
 const FeaturesSplit = ({
     className,
@@ -222,12 +251,9 @@ const FeaturesSplit = ({
                                 )}
                                 data-reveal-container=".split-item"
                             >
-                                <Image
-                                    src={require('./../../assets/images/features-split-image-03.png')}
-                                    alt="Features split 03"
-                                    width={500}
-                                    height={350}
-                                />
+                                <RadialBarChart width={500} height={300} cx={150} cy={150} innerRadius={20} outerRadius={140} barSize={10} data={radialData}>
+                                    <RadialBar minAngle={15} label={{ position: 'insideStart', fill: '#fff' }} background clockWise dataKey="uv" />
+                                </RadialBarChart>
                             </div>
                         </div>
                     </div>
