@@ -74,7 +74,7 @@ const FeaturesTiles = ({
                                         Better Insights
                                     </h4>
                                     <p className="m-0 text-sm">
-                                        In an era of one-click purchasing and automatic billing, it’s easier than ever to spend mindlessly. Get Insights with Panda Finances
+                                        In an era of one-click purchasing and automatic billing, it’s easier than ever to spend mindlessly. Get Insights with Capital One Finance Hack.
                                     </p>
                                 </div>
                             </div>
