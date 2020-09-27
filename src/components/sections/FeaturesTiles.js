@@ -43,7 +43,7 @@ const FeaturesTiles = ({
     );
 
     const sectionHeader = {
-        title: 'Panda Finances',
+        title: 'Benefits',
         paragraph:
             'See how PandaFinances can simplify your financial life, streamline the financial process, maximize your value, and save money!',
     };
@@ -71,10 +71,10 @@ const FeaturesTiles = ({
                                 </div>
                                 <div className="features-tiles-item-content">
                                     <h4 className="mt-0 mb-8">
-                                        EASY AS
+                                        Better Insights
                                     </h4>
                                     <p className="m-0 text-sm">
-                                        Join in minutes and pay no monthly fees.
+                                        In an era of one-click purchasing and automatic billing, it’s easier than ever to spend mindlessly. Get Insights with Panda Finances
                                     </p>
                                 </div>
                             </div>
@@ -97,10 +97,10 @@ const FeaturesTiles = ({
                                 </div>
                                 <div className="features-tiles-item-content">
                                     <h4 className="mt-0 mb-8">
-                                        SUPPORT
+                                        Better Relationships
                                     </h4>
                                     <p className="m-0 text-sm">
-                                        Get locally-based support, 7 days a week using our Panda Finances App or contact us at 111-111-1111.
+                                        Money is the leading cause of relationship stress, according to a survey by SunTrust Bank. It’s only natural that you and your partner will have different approaches to spending and saving, but this doesn’t mean finances have to cause friction.
                                     </p>
                                 </div>
                             </div>
@@ -123,10 +123,10 @@ const FeaturesTiles = ({
                                 </div>
                                 <div className="features-tiles-item-content">
                                     <h4 className="mt-0 mb-8">
-                                        Robust Workflow
+                                        Spend Less Impulsively
                                     </h4>
                                     <p className="m-0 text-sm">
-                                        We provide actionalbe, step by step guidance, balancing multiple competing needs and goals.
+                                        Tracking your purchases will force you to acknowledge unconscious spending, and with time, you’ll find yourself naturally spending in ways that don’t leave you feeling guilty later.
                                     </p>
                                 </div>
                             </div>
@@ -149,7 +149,7 @@ const FeaturesTiles = ({
                                         Get on top of your spending
                                     </h4>
                                     <p className="m-0 text-sm">
-                                        See where evrey dollar goes with auto-spend categorisation charts and analytics.
+                                        See where every dollar goes with spend categorization charts and analytics.
                                         Get monthly, weekly, and daily insights into your spending habits.
                                     </p>
                                 </div>
@@ -173,11 +173,10 @@ const FeaturesTiles = ({
                                 </div>
                                 <div className="features-tiles-item-content">
                                     <h4 className="mt-0 mb-8">
-                                        Smash your saving goals
+                                        Smash your Financial Goals
                                     </h4>
                                     <p className="m-0 text-sm">
-                                        Create and customize multiple saving goals on your account.
-                                        Track your deposits and daily, weekly, and monthly expenses.
+                                        People who track their spending know how much they’re earning, spending, and saving. So when they’re faced with a pay cut or unplanned medical expense, they know what levers to pull to keep saving at the right pace to achieve their goals.
                                     </p>
                                 </div>
                             </div>
@@ -200,10 +199,10 @@ const FeaturesTiles = ({
                                 </div>
                                 <div className="features-tiles-item-content">
                                     <h4 className="mt-0 mb-8">
-                                        1:1 advice from your own expert
+                                        Build Confidence
                                     </h4>
                                     <p className="m-0 text-sm">
-                                        Work with dedicated experts who listens, guides, and grows with you.
+                                        According to a survey by the American Psychological Association, the vast majority of Americans reported feeling stressed about money during the past month. We feel stressed about bills that are due, things we can't afford, etc. Knowing where your money flows allows you to feel confident about where the money is going.
                                     </p>
                                 </div>
                             </div>
