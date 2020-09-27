@@ -6,6 +6,7 @@ import Image from '../elements/Image';
 import {Area, AreaChart, CartesianGrid, Cell, Pie, PieChart, Tooltip, XAxis, YAxis} from "recharts";
 import {getPieChartData} from "./utils/pieChartUtils";
 import {getAreaChartData} from "./utils/areaChartUtils";
+const deepEqual = require('deep-equal');
 
 const propTypes = {
     ...SectionSplitProps.types,
@@ -30,26 +31,30 @@ const FeaturesSplit = ({
     imageFill,
     ...props
 }) => {
+    console.log('COMPONENT DID MOUNT');
     const [data, setData] = useState({
         pieChartData: [],
         areaChartData: []
     });
 
     getPieChartData().then(result => {
-        setData({
-            ...data,
-            pieChartData: result
-        });
+        if (!deepEqual(data.pieChartData, result)) {
+            setData({
+                pieChartData: result
+            });
+        }
         return result;
     }).catch(error => {
         console.error(`There was an error with the getPieChartData method`, error);
     });
 
     getAreaChartData().then(result => {
-        setData({
-            ...data,
-            areaChartData: result
-        });
+        if (!deepEqual(data.areaChartData, result)) {
+            setData({
+                ...data,
+                areaChartData: result
+            });
+        }
         return result
     }).catch(error => {
         console.error(`There was an error with the getAreaChartData method`, error);
