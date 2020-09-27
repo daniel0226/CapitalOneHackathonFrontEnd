@@ -10,6 +10,9 @@ Created and maintained with ❤️ by [Panda, Daniel, and Jackie]
 
 Check the live demo here 👉️ [https://master.d3j0s1d49e8f2r.amplifyapp.com/](https://master.d3j0s1d49e8f2r.amplifyapp.com/)
 
+## Backend
+* Link to our backend: https://github.com/daniel0226/CapitalOneApplicationHackathon
+* Chat Processing Backend: https://github.com/daniel0226/CapitalOneLex
 ## Table of contents
 
 * [Usage](#usage)
