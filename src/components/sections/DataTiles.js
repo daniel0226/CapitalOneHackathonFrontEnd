@@ -238,7 +238,7 @@ const DataTiles = ({
                                                 />
                                             ))}
                                         </Pie>
-                                        <Tooltip/>
+                                        <Tooltip formatter={(value, name, props) => { return [value.toString().substring(0,5), name ] }}/>
                                     </PieChart>
                                 </div>
                             </div>
