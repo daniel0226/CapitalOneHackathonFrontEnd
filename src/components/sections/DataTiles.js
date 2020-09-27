@@ -3,26 +3,19 @@ import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
-import {PieChart, Pie, Cell, Tooltip} from 'recharts';
-import LabelList from "recharts/lib/component/LabelList";
+import {PieChart, Pie, Cell, Tooltip, AreaChart, Area, XAxis, YAxis, CartesianGrid} from 'recharts';
 
-var Merchants;
-var Purchases;
-var Sum;
-var Categories;
-
-async function getData() {
-    var Percentages;
-    Merchants = await getMerchantCategory();
-    Purchases = await getPurchasesByID();
-    Sum = await getPurchaseSum(Purchases);
-    Categories = await getSumCategories(Merchants, Purchases);
-    Percentages = await getPercentages(Categories);
+async function getPieChartData() {
+    const Merchants = await getMerchantCategory();
+    const Purchases = await getPurchasesByID();
+    const Sum = await getPurchaseSum(Purchases);
+    const Categories = await getSumCategories(Merchants, Purchases);
+    const Percentages = await getPercentages(Categories, Sum);
     console.log(Percentages);
     return Percentages;
 }
 
-async function getPercentages(Categories) {
+async function getPercentages(Categories, sum) {
     let PricePercentages = [];
 
     let keys = Array.from(Categories.keys());
@@ -30,7 +23,7 @@ async function getPercentages(Categories) {
     for (var j = 0; j < keys.length; j++) {
         PricePercentages.push({
             name: keys[j],
-            value: (parseFloat(Categories.get(keys[j])) / Sum) * 100,
+            value: (parseFloat(Categories.get(keys[j])) / sum) * 100,
         });
     }
 
@@ -126,10 +119,14 @@ const DataTiles = ({
     pushLeft,
     ...props
 }) => {
-    const [data, setData] = useState([]);
+    const [data, setData] = useState({
+        pieChartData: []
+    });
 
-    getData().then(result => {
-        setData(result);
+    getPieChartData().then(result => {
+        setData({
+            pieChartData: result
+        });
         return result;
     }).catch(error => {
         console.error(`There was an error with the getData method`, error);
@@ -188,7 +185,7 @@ const DataTiles = ({
                                     </h4>
                                     <PieChart width={360} height={360}>
                                         <Pie
-                                            data={data}
+                                            data={data.pieChartData}
                                             cx={175}
                                             cy={180}
                                             outerRadius={150}
@@ -197,7 +194,7 @@ const DataTiles = ({
                                             fill="#8884d8"
                                             dataKey="value"
                                         >
-                                            {data.map((entry, index) => (
+                                            {data.pieChartData.map((entry, index) => (
                                                 <Cell
                                                     key={`cell-${index}`}
                                                     fill={
@@ -230,81 +227,29 @@ const DataTiles = ({
                                         />
                                     </div>
                                 </div>
-                                <div className="features-tiles-item-content">
+                                <div className="features-tiles-item-content" style={{"background-color": "white"}}>
                                     <h4 className="mt-0 mb-8">
                                         Robust Workflow
                                     </h4>
-                                    <PieChart width={360} height={360}>
-                                        <Pie
-                                            data={data}
-                                            cx={175}
-                                            cy={180}
-                                            outerRadius={150}
-                                            innerRadius={100}
-                                            paddingAngle={5}
-                                            fill="#8884d8"
-                                            dataKey="value"
-                                        >
-                                            {data.map((entry, index) => (
-                                                <Cell
-                                                    key={`cell-${index}`}
-                                                    fill={
-                                                        COLORS[
-                                                            index %
-                                                                COLORS.length
-                                                        ]
-                                                    }
-                                                />
-                                            ))}
-                                        </Pie>
-                                    </PieChart>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div
-                            className="tiles-item reveal-from-bottom"
-                            data-reveal-delay="400"
-                        >
-                            <div className="tiles-item-inner">
-                                <div className="features-tiles-item-header">
-                                    <div className="features-tiles-item-image mb-16">
-                                        <Image
-                                            src={require('./../../assets/images/feature-tile-icon-03.svg')}
-                                            alt="Features tile icon 03"
-                                            width={64}
-                                            height={64}
-                                        />
-                                    </div>
-                                </div>
-                                <div className="features-tiles-item-content">
-                                    <h4 className="mt-0 mb-8">
-                                        Robust Workflow
-                                    </h4>
-                                    <PieChart width={360} height={360}>
-                                        <Pie
-                                            data={data}
-                                            cx={175}
-                                            cy={180}
-                                            outerRadius={150}
-                                            innerRadius={100}
-                                            paddingAngle={5}
-                                            fill="#8884d8"
-                                            dataKey="value"
-                                        >
-                                            {data.map((entry, index) => (
-                                                <Cell
-                                                    key={`cell-${index}`}
-                                                    fill={
-                                                        COLORS[
-                                                            index %
-                                                                COLORS.length
-                                                        ]
-                                                    }
-                                                />
-                                            ))}
-                                        </Pie>
-                                    </PieChart>
+                                    <AreaChart width={730} height={250} data={data}
+                                               margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+                                        <defs>
+                                            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                                                <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8}/>
+                                                <stop offset="95%" stopColor="#8884d8" stopOpacity={0}/>
+                                            </linearGradient>
+                                            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                                                <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8}/>
+                                                <stop offset="95%" stopColor="#82ca9d" stopOpacity={0}/>
+                                            </linearGradient>
+                                        </defs>
+                                        <XAxis dataKey="name" />
+                                        <YAxis />
+                                        <CartesianGrid strokeDasharray="3 3" />
+                                        <Tooltip />
+                                        <Area type="monotone" dataKey="uv" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
+                                        <Area type="monotone" dataKey="pv" stroke="#82ca9d" fillOpacity={1} fill="url(#colorPv)" />
+                                    </AreaChart>
                                 </div>
                             </div>
                         </div>
