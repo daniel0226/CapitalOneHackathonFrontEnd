@@ -4,13 +4,11 @@ export async function getPieChartData() {
     const Sum = await getPurchaseSum(Purchases);
     const Categories = await getSumCategories(Merchants, Purchases);
     const Percentages = await getPercentages(Categories, Sum);
-    console.log(Percentages);
     return Percentages;
 }
 
 async function getPercentages(Categories, sum) {
     let PricePercentages = [];
-
     let keys = Array.from(Categories.keys());
 
     for (var j = 0; j < keys.length; j++) {
