@@ -3,7 +3,8 @@ import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
-import { PieChart, Pie, Cell } from 'recharts';
+import {PieChart, Pie, Cell, Tooltip} from 'recharts';
+import LabelList from "recharts/lib/component/LabelList";
 
 var Merchants;
 var Purchases;
@@ -129,7 +130,7 @@ const renderCustomizedLabel = ({
             textAnchor={x > cx ? 'start' : 'end'}
             dominantBaseline="central"
         >
-            {`${(percent * 100).toFixed(0)}%`}
+            {`${(percent * 100).toFixed(2)}%`}
         </text>
     );
 };
@@ -156,6 +157,7 @@ const DataTiles = ({
 
     getData().then(result => {
         setData(result);
+        return result;
     }).catch(error => {
         console.error(`There was an error with the getData method`, error);
     });
@@ -216,7 +218,7 @@ const DataTiles = ({
                                             data={data}
                                             cx={175}
                                             cy={180}
-                                            labelLine={false}
+                                            labelLine={true}
                                             label={renderCustomizedLabel}
                                             outerRadius={150}
                                             innerRadius={100}
@@ -236,6 +238,7 @@ const DataTiles = ({
                                                 />
                                             ))}
                                         </Pie>
+                                        <Tooltip/>
                                     </PieChart>
                                 </div>
                             </div>
