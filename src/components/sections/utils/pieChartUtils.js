@@ -17,7 +17,7 @@ async function getPercentages(Categories, sum) {
             value: (parseFloat(Categories.get(keys[j])) / sum) * 100,
         });
     }
-
+    
     return PricePercentages;
 }
 

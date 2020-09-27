@@ -97,10 +97,10 @@ const FeaturesSplit = ({
                                 data-reveal-container=".split-item"
                             >
                                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                                    Lightning fast workflow
+                                    Data-driven insights
                                 </div>
                                 <h3 className="mt-0 mb-12">
-                                    Data-driven insights
+                                    Spending by Categories
                                 </h3>
                                 <p className="m-0">
                                     Lorem ipsum dolor sit amet, consectetur
@@ -155,7 +155,7 @@ const FeaturesSplit = ({
                                     Lightning fast workflow
                                 </div>
                                 <h3 className="mt-0 mb-12">
-                                    Data-driven insights
+                                    Daily Total Purchases
                                 </h3>
                                 <p className="m-0">
                                     Lorem ipsum dolor sit amet, consectetur
@@ -173,7 +173,7 @@ const FeaturesSplit = ({
                                 )}
                                 data-reveal-container=".split-item"
                             >
-                                <AreaChart width={600} height={250} data={data.areaChartData}
+                                <AreaChart width={550} height={250} data={data.areaChartData}
                                            margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                                     <defs>
                                         <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
@@ -220,8 +220,8 @@ const FeaturesSplit = ({
                                 <Image
                                     src={require('./../../assets/images/features-split-image-03.png')}
                                     alt="Features split 03"
-                                    width={528}
-                                    height={396}
+                                    width={500}
+                                    height={350}
                                 />
                             </div>
                         </div>
