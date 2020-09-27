@@ -111,9 +111,10 @@ const FeaturesSplit = ({
     );
 
     const sectionHeader = {
-        title: 'Workflow that just works',
+        title: 'Your finances at a glance with Statistics',
         paragraph:
-            'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.',
+            "Whether it's your salary coming in or money going out, when you're buying that treat in your favorite cafe-thanks to our automatic categorization feauture, " +
+            " you can see all your transactions at a glance, divided into smart sub-categories to keep you posted on your fiancial habits.",
     };
 
     return (

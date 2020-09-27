@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
+import Button from '../elements/Button';
 
 const propTypes = {
     ...SectionTilesProps.types,
@@ -43,9 +44,9 @@ const FeaturesTiles = ({
     );
 
     const sectionHeader = {
-        title: 'Build up the whole picture',
+        title: 'Panda Finances',
         paragraph:
-            'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.',
+            'See how PandaFinances can simplify your financial life, streamline the financial process, maximize your value, and save money!',
     };
 
     return (
@@ -71,13 +72,10 @@ const FeaturesTiles = ({
                                 </div>
                                 <div className="features-tiles-item-content">
                                     <h4 className="mt-0 mb-8">
-                                        Robust Workflow
+                                        EASY AS
                                     </h4>
                                     <p className="m-0 text-sm">
-                                        Duis aute irure dolor in reprehenderit
-                                        in voluptate velit esse cillum dolore eu
-                                        fugiat nulla pariatur. Excepteur sint
-                                        occaecat cupidatat.
+                                        Join in minutes and pay no monthly fees.
                                     </p>
                                 </div>
                             </div>
@@ -100,13 +98,10 @@ const FeaturesTiles = ({
                                 </div>
                                 <div className="features-tiles-item-content">
                                     <h4 className="mt-0 mb-8">
-                                        Robust Workflow
+                                        SUPPORT
                                     </h4>
                                     <p className="m-0 text-sm">
-                                        Duis aute irure dolor in reprehenderit
-                                        in voluptate velit esse cillum dolore eu
-                                        fugiat nulla pariatur. Excepteur sint
-                                        occaecat cupidatat.
+                                        Get locally-based support, 7 days a week using our Panda Finances App or contact us at 111-111-1111.
                                     </p>
                                 </div>
                             </div>
@@ -132,10 +127,7 @@ const FeaturesTiles = ({
                                         Robust Workflow
                                     </h4>
                                     <p className="m-0 text-sm">
-                                        Duis aute irure dolor in reprehenderit
-                                        in voluptate velit esse cillum dolore eu
-                                        fugiat nulla pariatur. Excepteur sint
-                                        occaecat cupidatat.
+                                        We provide actionalbe, step by step guidance, balancing multiple competing needs and goals.
                                     </p>
                                 </div>
                             </div>
@@ -155,13 +147,11 @@ const FeaturesTiles = ({
                                 </div>
                                 <div className="features-tiles-item-content">
                                     <h4 className="mt-0 mb-8">
-                                        Robust Workflow
+                                        Get on top of your spending
                                     </h4>
                                     <p className="m-0 text-sm">
-                                        Duis aute irure dolor in reprehenderit
-                                        in voluptate velit esse cillum dolore eu
-                                        fugiat nulla pariatur. Excepteur sint
-                                        occaecat cupidatat.
+                                        See where evrey dollar goes with auto-spend categorisation charts and analytics.
+                                        Get monthly, weekly, and daily insights into your spending habits.
                                     </p>
                                 </div>
                             </div>
@@ -184,13 +174,11 @@ const FeaturesTiles = ({
                                 </div>
                                 <div className="features-tiles-item-content">
                                     <h4 className="mt-0 mb-8">
-                                        Robust Workflow
+                                        Smash your saving goals
                                     </h4>
                                     <p className="m-0 text-sm">
-                                        Duis aute irure dolor in reprehenderit
-                                        in voluptate velit esse cillum dolore eu
-                                        fugiat nulla pariatur. Excepteur sint
-                                        occaecat cupidatat.
+                                        Create and customize multiple saving goals on your account.
+                                        Track your deposits and daily, weekly, and monthly expenses.
                                     </p>
                                 </div>
                             </div>
@@ -213,13 +201,10 @@ const FeaturesTiles = ({
                                 </div>
                                 <div className="features-tiles-item-content">
                                     <h4 className="mt-0 mb-8">
-                                        Robust Workflow
+                                        1:1 advice from your own expert
                                     </h4>
                                     <p className="m-0 text-sm">
-                                        Duis aute irure dolor in reprehenderit
-                                        in voluptate velit esse cillum dolore eu
-                                        fugiat nulla pariatur. Excepteur sint
-                                        occaecat cupidatat.
+                                        Work with dedicated experts who listens, guides, and grows with you. 
                                     </p>
                                 </div>
                             </div>
