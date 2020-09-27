@@ -27,30 +27,6 @@ const DataTiles = ({
     pushLeft,
     ...props
 }) => {
-    const [data, setData] = useState({
-        pieChartData: [],
-        areaChartData: []
-    });
-
-    getPieChartData().then(result => {
-        setData({
-            ...data,
-            pieChartData: result
-        });
-        return result;
-    }).catch(error => {
-        console.error(`There was an error with the getPieChartData method`, error);
-    });
-
-    getAreaChartData().then(result => {
-        setData({
-            ...data,
-            areaChartData: result
-        });
-        return result
-    }).catch(error => {
-        console.error(`There was an error with the getAreaChartData method`, error);
-    });
 
     const outerClasses = classNames(
         'features-tiles section',
@@ -103,31 +79,6 @@ const DataTiles = ({
                                     <h4 className="mt-0 mb-8">
                                         Purchases by Category
                                     </h4>
-                                    <PieChart width={360} height={360}>
-                                        <Pie
-                                            data={data.pieChartData}
-                                            cx={175}
-                                            cy={180}
-                                            outerRadius={150}
-                                            innerRadius={100}
-                                            paddingAngle={5}
-                                            fill="#8884d8"
-                                            dataKey="value"
-                                        >
-                                            {data.pieChartData.map((entry, index) => (
-                                                <Cell
-                                                    key={`cell-${index}`}
-                                                    fill={
-                                                        COLORS[
-                                                            index %
-                                                                COLORS.length
-                                                        ]
-                                                    }
-                                                />
-                                            ))}
-                                        </Pie>
-                                        <Tooltip formatter={(value, name, props) => { return [value.toString().substring(0,5), name ] }}/>
-                                    </PieChart>
                                 </div>
                             </div>
                         </div>
@@ -151,20 +102,7 @@ const DataTiles = ({
                                     <h4 className="mt-0 mb-8">
                                         Robust Workflow
                                     </h4>
-                                    <AreaChart width={730} height={250} data={data.areaChartData}
-                                               margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-                                        <defs>
-                                            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                                                <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8}/>
-                                                <stop offset="95%" stopColor="#8884d8" stopOpacity={0}/>
-                                            </linearGradient>
-                                        </defs>
-                                        <XAxis dataKey="date" />
-                                        <YAxis />
-                                        <CartesianGrid strokeDasharray="3 3" />
-                                        <Tooltip />
-                                        <Area type="monotone" dataKey="dailyTotal" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
-                                    </AreaChart>
+
                                 </div>
                             </div>
                         </div>

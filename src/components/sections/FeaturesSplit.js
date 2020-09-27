@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
+import {Area, AreaChart, CartesianGrid, Cell, Pie, PieChart, Tooltip, XAxis, YAxis} from "recharts";
+import {getPieChartData} from "./utils/pieChartUtils";
+import {getAreaChartData} from "./utils/areaChartUtils";
 
 const propTypes = {
     ...SectionSplitProps.types,
@@ -11,6 +14,7 @@ const propTypes = {
 const defaultProps = {
     ...SectionSplitProps.defaults,
 };
+const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
 const FeaturesSplit = ({
     className,
@@ -26,6 +30,30 @@ const FeaturesSplit = ({
     imageFill,
     ...props
 }) => {
+    const [data, setData] = useState({
+        pieChartData: [],
+        areaChartData: []
+    });
+
+    getPieChartData().then(result => {
+        setData({
+            ...data,
+            pieChartData: result
+        });
+        return result;
+    }).catch(error => {
+        console.error(`There was an error with the getPieChartData method`, error);
+    });
+
+    getAreaChartData().then(result => {
+        setData({
+            ...data,
+            areaChartData: result
+        });
+        return result
+    }).catch(error => {
+        console.error(`There was an error with the getAreaChartData method`, error);
+    });
     const outerClasses = classNames(
         'features-split section',
         topOuterDivider && 'has-top-divider',
@@ -90,12 +118,31 @@ const FeaturesSplit = ({
                                 )}
                                 data-reveal-container=".split-item"
                             >
-                                <Image
-                                    src={require('./../../assets/images/features-split-image-01.png')}
-                                    alt="Features split 01"
-                                    width={528}
-                                    height={396}
-                                />
+                                <PieChart width={360} height={360}>
+                                    <Pie
+                                        data={data.pieChartData}
+                                        cx={175}
+                                        cy={180}
+                                        outerRadius={150}
+                                        innerRadius={100}
+                                        paddingAngle={5}
+                                        fill="#8884d8"
+                                        dataKey="value"
+                                    >
+                                        {data.pieChartData.map((entry, index) => (
+                                            <Cell
+                                                key={`cell-${index}`}
+                                                fill={
+                                                    COLORS[
+                                                    index %
+                                                    COLORS.length
+                                                        ]
+                                                }
+                                            />
+                                        ))}
+                                    </Pie>
+                                    <Tooltip formatter={(value, name, props) => { return [value.toString().substring(0,5), name ] }}/>
+                                </PieChart>
                             </div>
                         </div>
 
@@ -126,12 +173,20 @@ const FeaturesSplit = ({
                                 )}
                                 data-reveal-container=".split-item"
                             >
-                                <Image
-                                    src={require('./../../assets/images/features-split-image-02.png')}
-                                    alt="Features split 02"
-                                    width={528}
-                                    height={396}
-                                />
+                                <AreaChart width={600} height={250} data={data.areaChartData}
+                                           margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+                                    <defs>
+                                        <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8}/>
+                                            <stop offset="95%" stopColor="#8884d8" stopOpacity={0}/>
+                                        </linearGradient>
+                                    </defs>
+                                    <XAxis dataKey="date" />
+                                    <YAxis />
+                                    <CartesianGrid strokeDasharray="3 3" />
+                                    <Tooltip />
+                                    <Area type="monotone" dataKey="dailyTotal" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
+                                </AreaChart>
                             </div>
                         </div>
 
